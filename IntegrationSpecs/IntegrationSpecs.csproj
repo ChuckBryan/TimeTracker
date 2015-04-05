@@ -84,6 +84,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestHelpers\EFContextFactory.cs" />
+    <Compile Include="TestHelpers\EFCreateTestAccounts.cs" />
     <Compile Include="TestHelpers\INeedDatabase.cs" />
   </ItemGroup>
   <ItemGroup>

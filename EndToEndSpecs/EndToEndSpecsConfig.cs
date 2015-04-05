@@ -19,6 +19,9 @@ namespace EndToEndSpecs
             WhenTesting<INeedDatabase>().EnrichWith<EFContextFactory>();
             WhenTesting<SpecsFor<MvcWebApp>>().EnrichWith<EndToEndDatabaseCreator>();
             WhenTesting<SpecsFor<MvcWebApp>>().EnrichWith<DataPurger>();
+            WhenTesting<INeedDatabase>().EnrichWith<EFCreateTestAccounts>();
+
+            
         }
 
         protected override void AfterConfigurationApplied()
