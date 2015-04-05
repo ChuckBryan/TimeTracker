@@ -136,6 +136,7 @@
   <ItemGroup>
     <Compile Include="EndToEndSpecsConfig.cs" />
     <Compile Include="FirstSpec.cs" />
+    <Compile Include="Helpers\CredentialsForConsultant.cs" />
     <Compile Include="Helpers\DataPurger.cs" />
     <Compile Include="Helpers\EndToEndDatabaseCreator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -35,6 +35,8 @@ namespace EndToEndSpecs
 
             config.UseBrowser(BrowserDriver.Chrome);
 
+            config.AuthenticateBeforeEachTestUsing<CredentialsForConsultant>();
+
             config.InterceptEmailMessagesOnPort(59025);
 
             _host = new SpecsForIntegrationHost(config);

@@ -13,8 +13,8 @@ namespace IntegrationSpecs.TestHelpers
         {
             var userStore = new UserStore<ApplicationUser>(instance.Database);
             var userManager = new UserManager<ApplicationUser>(userStore);
-            var userToInsert = new ApplicationUser {UserName = "consultant@marathonus.com"};
-            userManager.Create(userToInsert, "Password@123");
+            var userToInsert = new ApplicationUser { UserName = CredentialStrings.Consultant.Email};
+            userManager.Create(userToInsert, CredentialStrings.Consultant.Password);
         }
     }
 }

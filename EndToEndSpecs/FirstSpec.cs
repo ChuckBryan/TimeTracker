@@ -1,6 +1,4 @@
-﻿using System.Net.Cache;
-using System.Web;
-using IntegrationSpecs.TestHelpers;
+﻿using IntegrationSpecs.TestHelpers;
 using NUnit.Framework;
 using SpecsFor;
 using SpecsFor.Mvc;
@@ -25,7 +23,7 @@ namespace EndToEndSpecs
             public void then_should_be_redirected_to_login()
             {
                 //  "%2F" = encoded "/"
-                SUT.Route.ShouldMapTo<AccountController>(c => c.Login("%2F"));
+                SUT.Route.ShouldMapTo<HomeController>(c => c.Index());
             }
             
         }
