@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationSpecs", "Integra
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Specs", "Specs", "{BDEE40FD-ACBE-4582-9CBD-78186985776B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeTrackerSpecs", "TimeTrackerSpecs\TimeTrackerSpecs.csproj", "{54013766-353D-4304-BFDC-E8EE8EB6A710}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{EB1D04AF-B644-4313-AD29-E96B470A46BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB1D04AF-B644-4313-AD29-E96B470A46BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB1D04AF-B644-4313-AD29-E96B470A46BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54013766-353D-4304-BFDC-E8EE8EB6A710}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54013766-353D-4304-BFDC-E8EE8EB6A710}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54013766-353D-4304-BFDC-E8EE8EB6A710}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54013766-353D-4304-BFDC-E8EE8EB6A710}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -36,5 +42,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{8586E83D-B38A-4215-B555-41F1C24AB86D} = {BDEE40FD-ACBE-4582-9CBD-78186985776B}
 		{EB1D04AF-B644-4313-AD29-E96B470A46BD} = {BDEE40FD-ACBE-4582-9CBD-78186985776B}
+		{54013766-353D-4304-BFDC-E8EE8EB6A710} = {BDEE40FD-ACBE-4582-9CBD-78186985776B}
 	EndGlobalSection
 EndGlobal

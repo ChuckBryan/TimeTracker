@@ -223,6 +223,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\ICurrentUser.cs" />
     <Compile Include="Infrastructure\MediatorRegistry.cs" />
     <Compile Include="Infrastructure\StructureMapServiceLocator.cs" />
     <Compile Include="Migrations\201504021027391_InitialCreate.cs" />
@@ -321,6 +322,7 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Home\SetName.cshtml" />
     <None Include="Web.EndToEndSpecs.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
