@@ -55,6 +55,9 @@
     <Reference Include="Heroic.Web.IoC">
       <HintPath>..\packages\Heroic.Web.IoC.2.3.0\lib\net45\Heroic.Web.IoC.dll</HintPath>
     </Reference>
+    <Reference Include="HtmlTags">
+      <HintPath>..\packages\HtmlTags.3.0.0.186\lib\4.0\HtmlTags.dll</HintPath>
+    </Reference>
     <Reference Include="MediatR">
       <HintPath>..\packages\MediatR.1.0.0.0\lib\portable-net45+win+wp80+Xamarin.iOS10+MonoAndroid10+MonoTouch10\MediatR.dll</HintPath>
     </Reference>
