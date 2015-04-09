@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using TimeTracker.Web.Data;
+﻿using System.Web.Mvc;
 using TimeTracker.Web.Infrastructure;
+using TimeTracker.Web.Models.Home;
+using Microsoft.Web.Mvc;
 
 namespace TimeTracker.Web.Controllers
 {
@@ -15,8 +12,6 @@ namespace TimeTracker.Web.Controllers
         public HomeController(ICurrentUser currentUser)
         {
             _currentUser = currentUser;
-
-           
         }
 
         public ActionResult Index()
@@ -56,6 +51,21 @@ namespace TimeTracker.Web.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+
+        public ActionResult SayHello(string name)
+        {
+            var model = new SayHelloViewModel
+            {
+                Name = name
+            };
+
+            return View(model);
+        }
+
+        public ActionResult SayHello(SayHelloForm form)
+        {
+            return this.RedirectToAction(c => c.SayHello(form.Name));
         }
     }
 }

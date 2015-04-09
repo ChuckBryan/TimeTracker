@@ -3,8 +3,10 @@ using System.Web.Mvc;
 using NUnit.Framework;
 using Should;
 using SpecsFor;
+using SpecsFor.Helpers.Web.Mvc;
 using TimeTracker.Web.Controllers;
 using TimeTracker.Web.Infrastructure;
+using TimeTracker.Web.Models.Home;
 
 namespace TimeTrackerSpecs.Web.Controllers
 {
@@ -61,6 +63,42 @@ namespace TimeTrackerSpecs.Web.Controllers
             {
                 var routeResult = (RedirectToRouteResult) _result;
                 routeResult.RouteValues["action"].ShouldEqual("Index");
+            }
+        }
+
+        public class when_saying_hello_to_a_user : SpecsFor<HomeController>
+        {
+            private ActionResult _result;
+
+            protected override void When()
+            {
+                _result = SUT.SayHello("John Doe");
+            }
+
+            [Test]
+            public void then_it_says_hello_to_the_user()
+            {
+                _result.ShouldRenderDefaultView()
+                    .WithModelLike(new SayHelloViewModel
+                    {
+                        Name = "John Doe"
+                    });
+            }
+        }
+
+        public class when_saying_hello_with_a_form : SpecsFor<HomeController>
+        {
+            private ActionResult _result;
+
+            protected override void When()
+            {
+                _result = SUT.SayHello(new SayHelloForm {Name = "Jane Doe"});
+            }
+
+            [Test]
+            public void then_it_redirects_to_the_say_hello_action()
+            {
+               _result.ShouldRedirectTo<HomeController>(c=>c.SayHello("Jane Doe"));
             }
         }
     }
