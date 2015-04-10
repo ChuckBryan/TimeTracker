@@ -1,6 +1,5 @@
 ﻿using System.Web.Mvc;
 using TimeTracker.Web.Infrastructure;
-using TimeTracker.Web.Models.Home;
 using Microsoft.Web.Mvc;
 
 namespace TimeTracker.Web.Controllers
@@ -16,28 +15,11 @@ namespace TimeTracker.Web.Controllers
 
         public ActionResult Index()
         {
-            ViewBag.Message = string.Format("Hello, {0}!", _currentUser.UserName);
             return View();
         }
 
 
-        public ActionResult SetName()
-        {
-            return View();
-        }
-
-        public ActionResult SetName(string name)
-        {
-            if (string.IsNullOrEmpty(name))
-            {
-                ViewBag.Error = "You must specify a name!";
-                return View();
-            }
-
-            _currentUser.SetName(name);
-
-            return RedirectToAction("Index");
-        }
+        
 
         public ActionResult About()
         {
@@ -53,19 +35,5 @@ namespace TimeTracker.Web.Controllers
             return View();
         }
 
-        public ActionResult SayHello(string name)
-        {
-            var model = new SayHelloViewModel
-            {
-                Name = name
-            };
-
-            return View(model);
-        }
-
-        public ActionResult SayHello(SayHelloForm form)
-        {
-            return this.RedirectToAction(c => c.SayHello(form.Name));
-        }
     }
 }

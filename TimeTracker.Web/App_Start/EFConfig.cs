@@ -9,7 +9,8 @@ namespace TimeTracker.Web
         public static void Initialize()
         {
             Database.SetInitializer(
-                new MigrateDatabaseToLatestVersion<AppDbContext,Migrations.Configuration>());
+                new MigrateDatabaseToLatestVersion<AppDbContext,
+                    Migrations.Configuration>());
         }
     }
 }

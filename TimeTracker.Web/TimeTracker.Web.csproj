@@ -243,7 +243,6 @@
     <Compile Include="Models\Account\ResetPasswordViewModel.cs" />
     <Compile Include="Models\Account\SendCodeViewModel.cs" />
     <Compile Include="Models\Account\VerifyCodeViewModel.cs" />
-    <Compile Include="Models\Home\SayHelloViewModel.cs" />
     <Compile Include="Models\Manage\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -326,8 +325,6 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Home\SetName.cshtml" />
-    <Content Include="Views\Home\SayHello.cshtml" />
     <None Include="Web.EndToEndSpecs.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -335,6 +332,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Core\" />
+    <Folder Include="Models\Home\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
