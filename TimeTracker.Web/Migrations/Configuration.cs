@@ -9,7 +9,8 @@ namespace TimeTracker.Web.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
+            //AutomaticMigrationDataLossAllowed = true;
         }
 
         protected override void Seed(TimeTracker.Web.Data.AppDbContext context)

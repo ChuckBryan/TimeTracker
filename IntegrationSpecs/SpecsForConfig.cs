@@ -10,6 +10,8 @@ namespace IntegrationSpecs
         public SpecsForConfig()
         {
             WhenTesting<INeedDatabase>().EnrichWith<EFDatabaseCreator>();
+            WhenTesting<INeedDatabase>().EnrichWith<TransactionScopeWrapper>();
+            WhenTesting<INeedDatabase>().EnrichWith<EFContextFactory>();
 
         }
     }
