@@ -234,6 +234,10 @@
     <Compile Include="Migrations\201504021027391_InitialCreate.Designer.cs">
       <DependentUpon>201504021027391_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201504141135482_CreateEntryLog.cs" />
+    <Compile Include="Migrations\201504141135482_CreateEntryLog.Designer.cs">
+      <DependentUpon>201504141135482_CreateEntryLog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account\ExternalLoginConfirmationViewModel.cs" />
     <Compile Include="Models\Account\ExternalLoginListViewModel.cs" />
@@ -342,6 +346,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201504021027391_InitialCreate.resx">
       <DependentUpon>201504021027391_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201504141135482_CreateEntryLog.resx">
+      <DependentUpon>201504141135482_CreateEntryLog.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

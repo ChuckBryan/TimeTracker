@@ -9,7 +9,7 @@ namespace TimeTracker.Web.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false;
             //AutomaticMigrationDataLossAllowed = true;
         }
 
