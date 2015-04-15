@@ -1,13 +1,9 @@
-using System.Data.Entity;
 using Heroic.Web.IoC;
 using System.Web.Http;
 using System.Web.Mvc;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
 using StructureMap;
 using StructureMap.Graph;
-using TimeTracker.Web.Data;
-using TimeTracker.Web.Domain;
+using TimeTracker.Web.Infrastructure;
 
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(TimeTracker.Web.StructureMapConfig), "Configure")]
 namespace TimeTracker.Web
@@ -29,11 +25,7 @@ namespace TimeTracker.Web
 				cfg.AddRegistry(new ActionFilterRegistry(namespacePrefix: "TimeTracker.Web"));
 
 				//TODO: Add other registries and configure your container!
-
-                
- 
-                
-
+                cfg.AddRegistry<MediatorRegistry>();
 			});
 
 			var resolver = new StructureMapDependencyResolver();
