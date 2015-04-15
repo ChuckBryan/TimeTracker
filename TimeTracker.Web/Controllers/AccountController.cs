@@ -8,6 +8,7 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
+using StructureMap;
 using TimeTracker.Web.Data;
 using TimeTracker.Web.Domain;
 using TimeTracker.Web.Models;
@@ -21,6 +22,8 @@ namespace TimeTracker.Web.Controllers
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
+        // Note: This is a workaround to tell StructureMap to use the Default constructor.
+        [DefaultConstructor]
         public AccountController()
         {
         }
