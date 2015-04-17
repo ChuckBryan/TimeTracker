@@ -4,6 +4,7 @@ using System.Web.Mvc;
 using StructureMap;
 using StructureMap.Graph;
 using TimeTracker.Web.Infrastructure;
+using TimeTracker.Web.Infrastructure.Tasks;
 
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(TimeTracker.Web.StructureMapConfig), "Configure")]
 namespace TimeTracker.Web
@@ -25,6 +26,7 @@ namespace TimeTracker.Web
 				cfg.AddRegistry(new ActionFilterRegistry(namespacePrefix: "TimeTracker.Web"));
 
 				//TODO: Add other registries and configure your container!
+                cfg.AddRegistry(new TaskRegistry());
                 cfg.AddRegistry<MediatorRegistry>();
 			});
 
